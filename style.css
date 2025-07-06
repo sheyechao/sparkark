@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 8rem 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.feature-box {
+    position: relative;
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.feature-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover img {
+    transform: scale(1.05);
+}
+
+.feature-box-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.feature-box:hover .feature-box-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-box-content h3 {
+    color: #fff;
+    margin-top: 0;
+}
+
+#contact {
+    background-color: #4ba0f5; /* Dark blue from banner */
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    border-radius: 5px;
+    animation: flash 2.5s infinite ease-in-out;
+}
+
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block; /* Center the list block */
+    text-align: left; /* Keep list text left-aligned */
+}
+
+#contact li {
+    margin-bottom: 0.5rem;
+}
+
